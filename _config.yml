@@ -14,7 +14,8 @@ description:         'Useful posts related to programming, tools and frameworks 
 url:                 sharatsachin.github.io
 baseurl:             'https://sharatsachin.github.io'
 paginate:            5
-paginate_path: "page:num"
+paginate_path:       "page:num"
+excerpt_separator:   <!--more-->
 
 # Footer Links
 footer-links:

@@ -1,11 +1,12 @@
 ---
 layout: post
 comments: true
-excerpt: An introduction to the art of competitive programming with C++, with emphasis on containers in this post. This is the first of a many part series.
 title: Competitive Programming in C++ (Part I - STL Containers)
 ---
 
-You may already know C++. Still, you may notice that others often write code faster and more concisely than you. You may wonder how others code ends up being so much shorter than yours. Why is this? More often than not, it is the knowledge they possess of the language constructs that exist in C++, that are especially suited for competitive programming. This post will help you get up to speed with the tools at your disposal, especially the Standard Template Library (STL).
+You may already know C++. Still, you may notice that others often write code faster and more concisely than you. You may wonder how others code ends up being so much shorter than yours. Why is this? More often than not, it is the knowledge they possess of the language constructs that exist in C++, that are especially suited for competitive programming. This series will help you get up to speed with the tools at your disposal, especially the Standard Template Library (STL). This post focuses on containers, and will be the first of a many part series.
+
+<!--more-->
 
 The STL is a set of C++ template classes to provide common programming data structures and functions such as lists, stacks, arrays, etc. It consists of :
 
