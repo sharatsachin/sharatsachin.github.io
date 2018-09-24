@@ -10,7 +10,7 @@ rdiscount:
 # Setup
 title:               Sharat Sachin
 tagline:             'Maximizing my potential'
-description:         'Useful posts and tutorials related to programming, tools and frameworks in general, with an emphasis on competitive programming.'
+description:         'Useful posts related to programming, tools and frameworks in general, with an emphasis on competitive programming. Also creating my own short notes for college.'
 url:                 sharatsachin.github.io
 baseurl:             'https://sharatsachin.github.io'
 paginate:            5
