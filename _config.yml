@@ -1,0 +1,42 @@
+# Permalinks
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+rdiscount:
+  extensions: [smart]
+
+
+# Setup
+title:               Sharat Sachin
+tagline:             'Maximizing my potential'
+description:         'Useful posts and tutorials related to programming, tools and frameworks in general, with an emphasis on competitive programming.'
+url:                 sharatsachin.github.io
+baseurl:             'https://sharatsachin.github.io'
+paginate:            5
+paginate_path: "page:num"
+
+# Footer Links
+footer-links:
+  dribbble:
+  email: sharatsachin@gmail.com
+  facebook: facebook.com/sharat.sachin
+  flickr:
+  github: github.com/sharatsachin
+  instagram:
+  linkedin: linkedin.com/in/sharat-sachin/
+  pinterest:
+  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
+  twitter: sharatsachin
+  stackoverflow: users/4542098/reddragon
+  youtube: /channel/UCflM9MGPiiUuOrUiQhi1S0A
+  googleplus: # anything in your profile username that comes after plus.google.com/
+
+# About/contact
+author:
+  name:              Sharat Sachin
+  email:             sharatsachin@gmail.com
+  url:               https://sharatsachin.github.io/
+
+# Custom vars
+version:             1.1.0
