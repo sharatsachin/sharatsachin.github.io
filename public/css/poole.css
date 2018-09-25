@@ -49,8 +49,8 @@ body {
 
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.3;
+  font-size: 15px;
+  line-height: 1.5;
 }
 @media (min-width: 38em) {
   html {
@@ -149,7 +149,7 @@ abbr[title] {
 /* Code */
 code,
 pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-family: 'Source Code Pro', Menlo, Monaco, "Courier New", monospace !important;
 }
 code {
   padding: .25em .5em;
@@ -189,7 +189,7 @@ pre code {
 
 /* Gist via GitHub Pages */
 .gist .gist-file {
-  font-family: Menlo, Monaco, "Courier New", monospace !important;
+  font-family: 'Source Code Pro', Menlo, Monaco, "Courier New", monospace !important;
 }
 .gist .markdown-body {
   padding: 15px;
