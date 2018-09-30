@@ -342,7 +342,7 @@ Provides a collection of key-value pairs, in which the first element of each pai
 ```cpp
 map<int,int> mp;
 mp[1]=1, mp[2]=4, mp[3]=9, mp[4]=16, mp[5]=25, mp[6]=36, mp[7]=49;
-map<int,int> mp2 = {{1,11},{2,12},{3,13}};
+map<int,int> mp2 = { {1,11},{2,12},{3,13} };
 mp.erase(mp2);
 map<int,int>::iterator ix = mp.find(4);
 mp.erase(ix);
@@ -363,3 +363,11 @@ mmp.insert({5,25});
 it_pair = mmp.equal_range(2);
 mmp.erase(it_pair.first, it_pair.second);
 ```
+
+## Unordered Associative Containers
+
+The unordered associative containers in C++ are `unordered_set`, `unordered_multiset`, `unordered_map` and `unordered_multimap`. In these containers, elements have no particular order, except that every group of elements whose keys are equal forms a contiguous subrange in the iteration order, also accessible with equal_range(). Search, insertion, and removal have average constant-time complexity, compared to the ordered containers which have logarithmic complexity. The member functions for unordered containers are more or less the same as for ordered containers. So the decision to use ordered/unordered containers can be made based on: 
+* unordered (hash-based) containers are faster, but require more memory
+* requirement for elements to be ordered
+
+That's enough for now. The next post will be about STL Iterators, and it is coming soon.
