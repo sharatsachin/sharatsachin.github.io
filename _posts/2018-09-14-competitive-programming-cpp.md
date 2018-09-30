@@ -237,3 +237,129 @@ else
 ```
 
 ## Priority Queue
+Priority queues are container adapters, same as stacks and queues. The difference lies in the fact that elements are arranged according to some ordering criteria, and the elements are popped in that order. In C++, the default behaviour for `priority_queue` is similar to a max heap, i.e., the largest element is popped first. We will learn how to change this default behaviour in later sections. It has the following member functions:
+1. `pq.empty()` - returns true if the underlying container is empty, false otherwise
+2. `pq.size()` - returns the number of elements 
+3. `pq.top()` - constant reference to top element, largest by default
+4. `pq.push(x)` - insert element
+5. `pq.pop()` - remove top element
+
+```cpp
+priority_queue<int> pq;
+pq.push(5); // [5]
+pq.push(15); // [15,5]
+pq.push(10); // [15,5,10]
+pq.top(); // 15
+pq.pop(); // [10,5]
+pq.pop(); // [5]
+if(pq.empty()) 
+	cout<<"Priority queue is empty."; 
+else 
+	cout<<"Priority queue has "<<pq.size()<<" elements."; // Priority queue has 1 elements
+```
+
+## Set and Multiset
+
+Sets are containers that store unique elements following a specific order. The essential difference between the set and the multiset is that in a set the keys must be unique, while a multiset permits duplicate keys. These containers are always kept sorted internally, in ascending order by default. The member functions available for them are: 
+
+1. `st.empty()` - returns true if the underlying container is empty, false otherwise
+2. `st.size()` - returns the number of elements
+3. `st.insert(x)` - insert element
+4. `st.erase(x)` - erase elements
+5. `st.clear()` - clear contents
+6. `st.find()` - get iterator to element
+7. `st.count()` - count elements with a specific value
+8. `st.lower_bound()` - return iterator to lower bound
+9. `st.upper_bound()` - return iterator to upper bound
+10. `st.equal_range()` - get range of equal elements
+
+```cpp
+int a[] = { 7, 4, 9, 1, 1, 4, 8 };
+set<int> s(a, a + 7); // s = {1,4,7,8,9}
+s.insert(3); // s = {1,3,4,7,8,9}
+s.erase(3); // s = {1,4,7,8,9}
+set<int>::iterator ix = s.find(4);
+s.erase(ix);  // s = {1,7,8,9}
+s.erase(s.find(7), s.find(9));  // s = {1,9}
+cout << "\nCount of 1: " << s.count(1); // Count of 1: 1
+cout << "\nCount of 2: " << s.count(2); // Count of 2: 0
+s.insert(2);
+s.insert(4);
+s.insert(5);
+s.insert(7); // s = {1,2,4,5,7,9}
+
+auto it = s.lower_bound(5);
+cout << "\nThe lower bound of 5 is " << *it << "."; 
+// Output:  The lower bound of 5 is 5.
+it = s.lower_bound(6);
+cout << "\nThe lower bound of 6 is " << *it << "."; 
+// Output: The lower bound of 6 is 7.
+it = s.lower_bound(10);
+if (it == s.end()) cout << "\nThe lower bound of 10 is at the end of the range.";
+// Output: The lower bound of 10 is at the end of the range.
+
+it = s.upper_bound(5);
+cout << "\nThe upper bound of 5 is " << *it << ".";
+// Output: The upper bound of 5 is 7.
+it = s.upper_bound(6);
+cout << "\nThe upper bound of 6 is " << *it << ".";
+// Output: The upper bound of 6 is 7.
+it = s.upper_bound(10);
+if (it == s.end()) cout << "\nThe upper bound of 10 is at the end of the range.";
+// Output: The upper bound of 10 is at the end of the range.
+
+auto it_pair  = s.equal_range(5);
+cout << "\nThe bounds of 5 are " << *it_pair.first << " and " << *it_pair.second << ".";
+// Output: The bounds of 5 are 5 and 7.
+
+int b[] = {1, 1, 2, 3, 4, 4, 4, 5};
+multiset<int> ms(b, b+8); // ms = {1,1,2,3,4,4,4,5}
+
+// Accessing all the elements with a specific value in multiset
+auto p = ms.lower_bound(4);
+cout<<"\n";
+while (p != ms.upper_bound(4))
+    cout << *p++ << " ";
+// Output : 4 4 4
+```
+[Minimal working example for set and multiset](https://ideone.com/l0lu14)
+
+## Map and Multimap
+Provides a collection of key-value pairs, in which the first element of each pair is a key and the second is the value associated with that key. In a map, the keys must be unique. A multimap is the same as a map, except that the keys need not be unique. These containers are always kept sorted internally, in ascending order by default according to the value of the key. The member functions available for them are: 
+
+1. `mp.empty()` - returns true if the underlying container is empty, false otherwise
+2. `mp.size()` - returns the number of key-value pairs in the container
+3. `operator[k]` - if k matches a key, it returns a reference to the mapped value; else it creates a key-value pair and inserts it into the map
+3. `mp.insert(x)` - insert element
+4. `mp.erase(x)` - erase elements
+5. `mp.clear()` - clear contents
+6. `mp.find()` - get iterator to element
+7. `mp.count()` - count elements with a specific value
+8. `mp.lower_bound()` - return iterator to lower bound
+9. `mp.upper_bound()` - return iterator to upper bound
+10. `mp.equal_range()` - get range of equal elements
+
+```cpp
+map<int,int> mp;
+mp[1]=1, mp[2]=4, mp[3]=9, mp[4]=16, mp[5]=25, mp[6]=36, mp[7]=49;
+map<int,int> mp2 = {{1,11},{2,12},{3,13}};
+mp.erase(mp2);
+map<int,int>::iterator ix = mp.find(4);
+mp.erase(ix);
+mp.erase(mp.find(5), mp.find(9));
+cout << "\nCount of 1: " << mp.count(1);
+cout << "\nCount of 2: " << mp.count(2);
+auto it = mp.lower_bound(5);
+cout << "\nThe lower bound of 5 is " << it->first << ".";
+auto it_pair  = mp.equal_range(5);
+cout << "\nThe bounds of 5 are " << it_pair.first->first 
+     << " and " << it_pair.second->first << ".";
+multimap<int,int> mmp;
+mmp.insert({1,1});
+mmp.insert({2,4});
+mmp.insert({2,9});
+mmp.insert({2,16});
+mmp.insert({5,25});
+it_pair = mmp.equal_range(2);
+mmp.erase(it_pair.first, it_pair.second);
+```
