@@ -342,27 +342,37 @@ Provides a collection of key-value pairs, in which the first element of each pai
 ```cpp
 map<int,int> mp;
 mp[1]=1, mp[2]=4, mp[3]=9, mp[4]=16, mp[5]=25, mp[6]=36, mp[7]=49;
+// mp = {1->1,2->4,3->9,4->16,5->25,6->36,7->49}
 map<int,int> mp2 = { {1,11},{2,12},{3,13} };
-mp.erase(mp2);
+// mp2 = {1->11,2->12,3->13}
+mp.erase(3);
+// mp = {1->1,2->4,4->16,5->25,6->36,7->49}
 map<int,int>::iterator ix = mp.find(4);
 mp.erase(ix);
+// mp = {1->1,2->4,5->25,6->36,7->49}
 mp.erase(mp.find(5), mp.find(9));
+// mp = {1->1,2->4}
 cout << "\nCount of 1: " << mp.count(1);
-cout << "\nCount of 2: " << mp.count(2);
+// Output : Count of 1: 1
 auto it = mp.lower_bound(5);
 cout << "\nThe lower bound of 5 is " << it->first << ".";
-auto it_pair  = mp.equal_range(5);
-cout << "\nThe bounds of 5 are " << it_pair.first->first 
+// Output : The lower bound of 5 is 2.
+auto it_pair  = mp.equal_range(1);
+cout << "\nThe bounds of 1 are " << it_pair.first->first 
      << " and " << it_pair.second->first << ".";
+// Output : The bounds of 1 are 1 and 2.
 multimap<int,int> mmp;
 mmp.insert({1,1});
 mmp.insert({2,4});
 mmp.insert({2,9});
 mmp.insert({2,16});
 mmp.insert({5,25});
+// mmp = {1->1,2->4,2->9,2->16,5->25}
 it_pair = mmp.equal_range(2);
 mmp.erase(it_pair.first, it_pair.second);
+// mmp = {1->1,5->25}
 ```
+[Minimal working example for map and multimap](https://ideone.com/xigSak)
 
 ## Unordered Associative Containers
 
