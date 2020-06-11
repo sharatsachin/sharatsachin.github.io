@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: sharatsachin.github.io
+Token: 643e19500598909adc2361f196001cd6013eba3d4b9b3452988b668fe5b013f4
