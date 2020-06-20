@@ -10,11 +10,11 @@ title: About Me
 
 </style>
 
-<img src="https://i.imgur.com/s7lXe9R.jpg" />
+<img src="https://i.imgur.com/PQweYFf.jpg" />
 
 I am an undergraduate computer science student currently in my final year at the Bharati Vidyapeeth College of Engineering, Delhi. I am passionate about computers, with strong technical, business, and interpersonal skills for working in a team and successfully completing a project.
 
-I am currently pursuing knowledge in data science and machine learning, and I'm also very interested in competitive programming. This is my portfolio/blog.
+I am currently pursuing knowledge in data science and machine learning, and I'm also very interested in competitive programming. I also love to dabble in Photoshop. I also have a few web development projects under my belt. This is my portfolio/blog. 
 
 <a class="link" href="mailto:sharatsachin@gmail.com" style="color: white; background: #4daf4a;">Email</a>
 <a class="link" href="https://www.linkedin.com/in/sharat-sachin/" style="color: white; background: #e41a1c;">LinkedIn</a>
