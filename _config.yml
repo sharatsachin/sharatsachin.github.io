@@ -1,3 +1,5 @@
+include: [".well-known"]
+
 # Permalinks
 
 markdown: kramdown
