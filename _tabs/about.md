@@ -23,3 +23,4 @@ I am currently pursuing a Masters degree in Data Science and Engineering from BI
 <a class="link" href="https://github.com/sharatsachin" style="color: white; background: #0E53A7;">GitHub</a>
 <a class="link" href="https://www.codechef.com/users/sharatsachin" style="color: white; background: #7e525a;">CodeChef</a>
 <a class="link" href="https://codeforces.com/profile/sharatsachin" style="color: white; background: #96a625;">Codeforces</a>
+<a class="link" href="https://www.stopstalk.com/user/profile/sharatsachin" style="color: white; background: #ae1a60;">StopStalk</a>
