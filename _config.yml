@@ -26,10 +26,10 @@ description: >- # used by seo meta and the atom feed
 url: "https://www.sharats.dev"
 
 github:
-  username: github_username # change to your GitHub username
+  username: sharatsachin # change to your GitHub username
 
-twitter:
-  username: twitter_username # change to your Twitter username
+# twitter:
+#   username: # change to your Twitter username
 
 social:
   # Change to your full name.
